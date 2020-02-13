@@ -62,23 +62,27 @@ export default {
 
   data () {
     return {
+      id: EssentialLink.id,
       leftDrawerOpen: false,
       version: '1.0.0',
       redirect: () => this.$router.push('/'),
       essentialLinks: [
         {
+          id: '1',
           title: 'Characters',
           caption: 'Veja todos os Personagens',
           icon: 'face',
           link: '/#/chars'
         },
         {
+          id: '2',
           title: 'Movies',
           caption: 'Conheça todos os filmes!',
           icon: 'movie',
           link: '/#/movies'
         },
         {
+          id: '3',
           title: 'Planets',
           caption: 'Planetas do universo Star Wars',
           icon: 'language',
