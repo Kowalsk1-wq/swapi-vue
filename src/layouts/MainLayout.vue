@@ -7,7 +7,7 @@
           dense
           round
           @click="leftDrawerOpen = !leftDrawerOpen"
-          icon="list"
+          icon="menu"
           aria-label="Menu"
         />
 
@@ -24,6 +24,7 @@
           round
           @click=redirect
           icon="home"
+          v-if="this.isHome() === false"
         />
       </q-toolbar>
     </q-header>
@@ -65,7 +66,13 @@ export default {
       id: EssentialLink.id,
       leftDrawerOpen: false,
       version: '1.0.0',
-      redirect: () => this.$router.push('/'),
+      redirect: async () => {
+        this.$router.push('/')
+      },
+      isHome: () => {
+        if (window.location.href === 'http://localhost:8080/#/') return true
+        else return false
+      },
       essentialLinks: [
         {
           id: '1',

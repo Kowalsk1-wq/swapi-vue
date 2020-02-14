@@ -1,6 +1,7 @@
 <template>
-  <q-page class="flex flex-center cards">
+  <q-page class="cards">
     <GridCard
+      class="cardChar"
       v-for="char in chars"
       :key="char.name"
       v-bind="char"
@@ -10,14 +11,19 @@
 
 <style scoped>
   .cards {
-    flex-direction: column;
+    display: inline-block;
+    width: 100%;
+    padding:10px;
+    padding-left: 14.50%;
+    vertical-align: center;
+    justify-content: center;
   }
 
   .cardChar {
-    width: 350px;
-    height: auto;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    width: 25%;
+    float:left;
+    display:block;
+    margin: 10px 10px 10px 20px;
   }
 </style>
 
